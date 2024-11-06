@@ -1,0 +1,86 @@
+body{
+  background-color: #003F5C;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Relewey*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@media screen {
+  #img-icon {
+    position: absolute;
+    top: 25%;      
+    left: 50%;     
+    transform: translate(-50%, -50%);
+    width: 250px;
+  }
+
+  .tx-1{
+    font-size: 64px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    position: absolute;
+    left: 82.72px; 
+    top: 205px; 
+  }
+
+  .tx-2{
+    font-size: 48px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    position: absolute;
+    left: 127.72px; 
+    top: 280px; 
+  }
+
+  p {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 17px;
+    color: #d3d3d3;
+    text-align: center;
+    position: relative; 
+    top:380px;         
+  }
+
+
+
+  footer p{
+    text-align: center;
+    position: relative; 
+    top: 550px; 
+    color: #d3d3d3;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative; 
+    top:380px; 
+  }
+
+  button {
+      width: 272px;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      border-radius: 23px;
+  }
+
+  #entrar {
+    background-color: #3ABA7D; /* Nova cor para o botão "Entrar" */
+    color: black;
+  }
+
+}
