@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário da Saúde</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Tela 1 -->
+    <div class="screen active" id="screen1">
+      <img src="imagem/img1.svg" alt="Agendamento de Consultas" class="image">
+      <h2>Agendamento de Consultas</h2>
+      <p>Acompanhe suas consultas e exames de forma organizada</p>
+      <button onclick="nextScreen(2)">Próximo</button>
+    </div>
+
+    <!-- Tela 2 -->
+    <div class="screen" id="screen2">
+      <img src="imagem/img2.svg" alt="Lembretes de Medicamentos" class="image">
+      <h2>Lembretes de Medicamentos</h2>
+      <p>Receba lembretes para medicamentos e vacinas</p>
+      <button onclick="nextScreen(3)">Próximo</button>
+    </div>
+
+    <!-- Tela 3 -->
+    <div class="screen" id="screen3">
+      <img src="imagem/img3.svg" alt="Gerenciamento de Perfil Familiar" class="image">
+      <h2>Gerenciamento de Perfil Familiar</h2>
+      <p>Gerencie as informações de toda a família em um só lugar</p>
+      <button onclick="startApp()">Começar</button>
+    </div>
+  </div>
+
+  <footer>© 2024 Diário da Saúde</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
