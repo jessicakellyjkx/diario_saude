@@ -1,6 +1,8 @@
 body{
   background-color: #003F5C;
+  margin: 0px
 }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -55,38 +57,70 @@ body{
     top: 210px;         
   }
 
+  h2 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative; 
+    top: 210px;
+  }
 
   .login-box {
     background-color: #fff;
-    color: #003a53;
-    padding: 20px 30px;
-    border-radius: 15px;
-    width: 80%;
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: left;
-    top: 30px;
-}
-
-.login-box label {
+    padding: 20px;
+    border-radius: 20px;
+    width: 58%;
+    text-align: center;
+    position: relative; 
+    left: 15%;
+    top: 214px;
+  
+  }
+  
+  
+  .login-box label {
     font-size: 14px;
-    color: #003a53;
-}
-
-.login-box input[type="email"],
-.login-box input[type="password"] {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    border-radius: 20px;
+  }
+  
+  .login-box input {
+    width: 100%;
+    padding: 6px 2px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  
+  .login-box button {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #c1c1c1;
+    background-color: #3ABA7D;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
     border-radius: 10px;
-}
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-box .login-link {
+    font-size: 14px;
+    color: #003F5C;
+    margin-top: 15px;
+  }
+
 
 
   footer p{
     text-align: center;
     position: relative; 
-    top: 530px; 
+    top: 260px; 
     color: #d3d3d3;
   }
 }
