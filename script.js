@@ -1,22 +1,17 @@
-function entrar() {
-  alert("Função de login em desenvolvimento.");
-}
+let currentScreen = 1;
+const totalScreens = 3;
 
-function criarConta() {
-  alert("Função de criação de conta em desenvolvimento.");
-}
-
-
-function nextScreen(screenNumber) {
-  // Oculta todas as telas
-  document.querySelectorAll('.screen').forEach(screen => {
-    screen.classList.remove('active');
+function showScreen(screenNumber) {
+  document.querySelectorAll('.screen').forEach((screen, index) => {
+    screen.classList.toggle('active', index + 1 === screenNumber);
   });
-  // Mostra a tela atual
-  document.getElementById(`screen${screenNumber}`).classList.add('active');
 }
 
-function startApp() {
-  alert('Aplicativo iniciado!');
-  // Aqui você pode redirecionar para a página principal do app
-}
+document.querySelectorAll('.btn').forEach((button, index) => {
+  button.addEventListener('click', () => {
+    currentScreen = currentScreen < totalScreens ? currentScreen + 1 : 1;
+    showScreen(currentScreen);
+  });
+});
+
+showScreen(currentScreen);

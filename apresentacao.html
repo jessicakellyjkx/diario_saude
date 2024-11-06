@@ -4,36 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diário da Saúde</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style_apresentacao.css">
 </head>
 <body>
   <div class="container">
     <!-- Tela 1 -->
-    <div class="screen active" id="screen1">
-      <img src="imagem/img1.svg" alt="Agendamento de Consultas" class="image">
+    <div class="screen" id="screen1">
+      <div class="image">
+        <img src="imagem/img1.svg" alt="Agendamento de Consultas">
+      </div>
       <h2>Agendamento de Consultas</h2>
       <p>Acompanhe suas consultas e exames de forma organizada</p>
-      <button onclick="nextScreen(2)">Próximo</button>
+      <button class="btn">Próximo</button>
+      <div class="pagination">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
     </div>
 
     <!-- Tela 2 -->
     <div class="screen" id="screen2">
-      <img src="imagem/img2.svg" alt="Lembretes de Medicamentos" class="image">
+      <div class="image">
+        <img src="imagem/img2.svg" alt="Lembretes de Medicamentos">
+      </div>
       <h2>Lembretes de Medicamentos</h2>
       <p>Receba lembretes para medicamentos e vacinas</p>
-      <button onclick="nextScreen(3)">Próximo</button>
+      <button class="btn">Próximo</button>
+      <div class="pagination">
+        <span class="dot"></span>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
     </div>
 
     <!-- Tela 3 -->
     <div class="screen" id="screen3">
-      <img src="imagem/img3.svg" alt="Gerenciamento de Perfil Familiar" class="image">
+      <div class="image">
+        <img src="imagem/img3.svg" alt="Gerenciamento de Perfil Familiar">
+      </div>
       <h2>Gerenciamento de Perfil Familiar</h2>
       <p>Gerencie as informações de toda a família em um só lugar</p>
-      <button onclick="startApp()">Começar</button>
+      <button class="btn">Começar</button>
+      <div class="pagination">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot active"></span>
+      </div>
     </div>
-  </div>
 
-  <footer>© 2024 Diário da Saúde</footer>
+    <footer>© 2024 Diário da Saúde</footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
