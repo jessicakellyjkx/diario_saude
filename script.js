@@ -1,17 +1,7 @@
-let currentScreen = 1;
-const totalScreens = 3;
-
-function showScreen(screenNumber) {
-  document.querySelectorAll('.screen').forEach((screen, index) => {
-    screen.classList.toggle('active', index + 1 === screenNumber);
-  });
+function entrar() {
+  alert("Função de login em desenvolvimento.");
 }
 
-document.querySelectorAll('.btn').forEach((button, index) => {
-  button.addEventListener('click', () => {
-    currentScreen = currentScreen < totalScreens ? currentScreen + 1 : 1;
-    showScreen(currentScreen);
-  });
-});
-
-showScreen(currentScreen);
+function criarConta() {
+  alert("Função de criação de conta em desenvolvimento.");
+}

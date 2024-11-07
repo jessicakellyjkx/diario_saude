@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px; /* Limite de largura para dispositivos maiores */
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #3b5998;
+  color: white;
+  height: 60px;
+}
+
+.header h1 {
+  font-size: 18px;
+}
+
+.menu-icon, .profile-icon {
+  font-size: 24px;
+}
+
+.section {
+  padding: 20px;
+  flex: 1; /* Expande as seções para preencher a área */
+}
+
+.section h2 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #3b5998;
+  padding-bottom: 5px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #003366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.emergency-contact {
+  padding: 10px;
+  border: 1px solid #3b5998;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.emergency-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  width: 80px;
+  height: 80px;
+  background-color: #003366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+
+  /* Estilos para o Menu Lateral */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #00a25b;
+    color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding-top: 20px;
+    z-index: 10;
+  }
+
+  .side-menu.open {
+    transform: translateX(0);
+  }
+
+  .close-btn {
+    font-size: 24px;
+    text-align: right;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+
+  .menu-section {
+    padding: 20px;
+  }
+
+  .menu-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 5px;
+  }
+
+  .menu-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .menu-section ul li {
+    padding: 10px 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .footer-menu {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .footer-menu p {
+    margin: 5px 0;
+  }
+
+  .social-icons span {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+}

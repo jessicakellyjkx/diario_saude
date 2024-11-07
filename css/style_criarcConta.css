@@ -1,0 +1,126 @@
+.login-box{
+  background-color: #003F5C;
+  margin: 0px
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Relewey*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@media screen {
+  #img-icon {
+    position: absolute;
+    top: 15%;      
+    left: 50%;     
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+
+  .tx-1{
+    font-size: 32px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    position: absolute;
+    left: 31%; 
+    top: 16%; 
+  }
+
+  .tx-2{
+    font-size: 24px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    position: absolute;
+    left: 41%; 
+    top: 22.1%; 
+  }
+
+  .tx-3{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+  }
+
+  p {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    color: #d3d3d3;
+    text-align: center;
+    position: relative; 
+    top: 210px;         
+  }
+
+  h2 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative; 
+    top: 210px;
+  }
+
+  .login-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 58%;
+    text-align: center;
+    position: relative; 
+    left: 15%;
+    top: 214px;
+  
+  }
+  
+  
+  .login-box label {
+    font-size: 14px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    border-radius: 20px;
+  }
+  
+  .login-box input {
+    width: 100%;
+    padding: 6px 2px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  
+  .login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3ABA7D;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-box .login-link {
+    font-size: 14px;
+    color: #003F5C;
+    margin-top: 15px;
+  }
+
+
+
+  footer p{
+    text-align: center;
+    position: relative; 
+    top: 260px; 
+    color: #d3d3d3;
+  }
+}
