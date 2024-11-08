@@ -1,0 +1,146 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+.container {
+  max-width: 400px;
+  margin: auto;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  z-index: 1000;
+}
+.header h2 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+.header i {
+  color: #4CAF50;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.section {
+  padding: 80px 20px 20px 20px;
+}
+.section h3 {
+  font-size: 22px;
+  color: #003b50;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  border-bottom: 2px solid #003b50;
+  padding-bottom: 10px;
+}
+.form-group {
+  margin: 20px 0;
+}
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+.form-inline {
+  display: flex;
+  gap: 10px;
+}
+.form-inline .form-group {
+  flex: 1;
+}
+.form-group input[readonly] {
+  color: #333;
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #4CAF50;
+  color: #fff;
+  overflow-y: auto;
+  transition: left 0.3s;
+  padding-top: 20px;
+}
+.sidebar.show {
+  left: 0;
+}
+.sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+.sidebar h3 {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidebar ul li i {
+  margin-right: 10px;
+}
+.sidebar ul li:hover {
+  background-color: #3e8e41;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-icons i {
+  font-size: 20px;
+}
+.footer-text {
+  text-align: center;
+  font-size: 12px;
+  margin: 10px 0;
+}

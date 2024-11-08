@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meus Dados</title>
+<!-- Link do Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="css/style_MeusDados.css">
+
+
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <i class="fas fa-bars" onclick="toggleSidebar()"></i> <!-- Ícone de menu à esquerda -->
+        <h2>Francisca Cláudia da Silva</h2> <!-- Texto centralizado -->
+        <i class="fas fa-user"></i> <!-- Ícone de usuário à direita -->
+    </div>
+
+    <!-- Menu Lateral -->
+    <div class="sidebar" id="sidebar">
+        <i class="fas fa-times close-btn" onclick="toggleSidebar()"></i>
+        <h3>Perfil de Saúde</h3>
+        <ul>
+            <li><i class="fas fa-file-medical-alt"></i> Gerenciamento de Exames <i class="fas fa-chevron-down"></i></li>
+            <li><i class="fas fa-calendar-check"></i> Registro de Consultas <i class="fas fa-chevron-down"></i></li>
+            <li><i class="fas fa-bell"></i> Notificações e Lembretes <i class="fas fa-chevron-down"></i></li>
+        </ul>
+        <h3>Contatos</h3>
+        <ul>
+            <li><i class="fas fa-user-friends"></i> Gerenciar meus Contatos <i class="fas fa-chevron-down"></i></li>
+            <li><i class="fas fa-phone-alt"></i> Contatos de Emergência <i class="fas fa-chevron-down"></i></li>
+        </ul>
+        <h3>Meus Perfis</h3>
+        <ul>
+            <li><i class="fas fa-exchange-alt"></i> Trocar de Perfil</li>
+            <li><i class="fas fa-cog"></i> Configurações do Perfil</li>
+        </ul>
+        <ul>
+            <li style="padding: 15px; color: #fff; background-color: #333; text-align: center;">Sair</li>
+        </ul>
+        <div class="social-icons">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="footer-text">2024 - Todos os direitos reservados</div>
+    </div>
+
+    <!-- Conteúdo da Página Meus Dados -->
+    <div class="section">
+        <h3>Meus Dados</h3>
+        
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" value="FRANCISCA CLÁUDIA DA SILVA" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="text" id="nascimento" value="12/09/1952" readonly>
+        </div>
+        
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="peso">Peso:</label>
+                <input type="text" id="peso" value="80KG" readonly>
+            </div>
+            <div class="form-group">
+                <label for="altura">Altura:</label>
+                <input type="text" id="altura" value="1.65M" readonly>
+            </div>
+        </div>
+        
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <input type="text" id="sexo" value="FEMININO" readonly>
+            </div>
+            <div class="form-group">
+                <label for="sangue">Tipo Sanguíneo:</label>
+                <input type="text" id="sangue" value="AB+" readonly>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="alergias">Alergias:</label>
+            <input type="text" id="alergias" value="IBUPROFENO" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label for="medicamentos">Medicamentos em Uso:</label>
+            <input type="text" id="medicamentos" value="NENHUM" readonly>
+        </div>
+        
+        <div class="form-group">
+            <label for="condicoes">Condições Preexistentes:</label>
+            <input type="text" id="condicoes" value="DIABETES, HIPERTENSÃO" readonly>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("show");
+    }
+</script>
+</body>
