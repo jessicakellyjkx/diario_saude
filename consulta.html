@@ -54,14 +54,14 @@
     <!-- Conteúdo da Página Minhas Consultas -->
     <div class="consultas-section">
         <h3>Minhas Consultas</h3>
-
+        
         <!-- Exemplo de Consulta 1 -->
         <div class="appointment">
-            <h4>Consulta com Dr. José Silva</h4>
-            <p><strong>Data:</strong> 15/10/2023</p>
-            <p><strong>Horário:</strong> 10:30</p>
-            <p><strong>Especialidade:</strong> Cardiologia</p>
-            <p><strong>Observações:</strong> Retorno para análise de exames.</p>
+            <h4 id="medico">Consulta com Dr. José Silva</h4>
+            <p><strong>Data: </strong><span id="data-consulta">15/10/2023</span></p>
+            <p><strong>Horário: </strong><span id="horario-consulta">10:30</span></p>
+            <p><strong>Especialidade: </strong><span id="especialidade">Cardiologia</span></p>
+            <p><strong>Observações: </strong><span id="observacoes">Retorno para análise de exames.</span></p>
         </div>
 
         <!-- Exemplo de Consulta 2 -->
@@ -76,13 +76,22 @@
         <!-- Exemplo de Consulta 3 -->
         <div class="appointment">
             <h4>Consulta com Dra. Maria Oliveira</h4>
-            <p><strong>Data:</strong> 22/11/2023</p>
-            <p><strong>Horário:</strong> 14:00</p>
-            <p><strong>Especialidade:</strong> Endocrinologia</p>
-            <p><strong>Observações:</strong> Primeira consulta para avaliação geral.</p>
+            <p><strong>Data: </strong> 22/11/2023</p>
+            <p><strong>Horário: </strong> 14:00</p>
+            <p><strong>Especialidade: </strong>Endocrinologia</p>
+            <p><strong>Observações: </strong> Primeira consulta para avaliação geral.</p>
         </div>
     </div>
 </div>
+<script src="js/script.js"></script>
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("show");
+    }
+
+    window.onload = (event) => {
+        consultas(1);
+    };
 </script>
 </body>
 </html>

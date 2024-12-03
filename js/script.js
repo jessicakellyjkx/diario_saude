@@ -1,5 +1,6 @@
 
 
+
 //menu lateral
 function toggleSidebar() {
   document.getElementById("sidebar").classList.toggle("show");
@@ -36,7 +37,144 @@ let currentSlide = 0;
 
 //Criar conta
 
-function redirecionar(event) {
+async function redirecionar(event) {
   event.preventDefault(); // Impede o envio padrão do formulário
-  window.location.href = "apresentacao.html"; // Redireciona para "apresentacao.html"
+
+  const myHeaders = new Headers()
+  myHeaders.append("Content-Type", "application/json")
+  myHeaders.append("Accept", "application/json")
+
+  const raw = JSON.stringify({
+    name: event.target.elements.name.value,
+    email: event.target.elements.email.value,
+    password: event.target.elements.password.value,
+    telefone: event.target.elements.telefone.value,
+    dataNascimento: event.target.elements.dataNascimento.value,
+  })
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  }
+
+  return await fetch("http://localhost:8080/criar-conta", requestOptions)
+    .then((response) => {
+      if (response?.status === 200) window.location.href = "apresentacao.html"; // Redireciona para "apresentacao.html"
+    })
+    .catch((error) => {
+      console.error("error => ", error)
+      return false
+    })
+}
+
+async function meusDados(idusuario) {
+  const myHeaders = new Headers()
+  myHeaders.append("Content-Type", "application/json")
+  myHeaders.append("Accept", "application/json")
+
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  }
+
+  const response =  await fetch(`http://localhost:8080/meus-dados?idusuario=${idusuario}`, requestOptions)
+    .then((response) => {
+      if (response?.status === 200){
+        return response.json();
+      }
+    })    
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      console.error("error => ", error)
+      return false
+    })
+
+  if (response?.usuario) {
+    const { nome, email } = response.usuario;
+
+    document.getElementById('nome').value = nome;
+    document.getElementById('email').value = email;
+    document.getElementById('nascimento').value = response.usuario['data_nascimento'].slice(0, 10);
+  }
+}
+
+async function dadosUsuario(idusuario) {
+  const myHeaders = new Headers()
+  myHeaders.append("Content-Type", "application/json")
+  myHeaders.append("Accept", "application/json")
+
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  }
+
+  const response =  await fetch(`http://localhost:8080/dados-usuario?idusuario=${idusuario}`, requestOptions)
+    .then((response) => {
+      if (response?.status === 200){
+        return response.json();
+      }
+    })    
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      console.error("error => ", error)
+      return false
+    })
+  
+    console.log(response);
+  if (response?.dadosUsuario) {
+    const { peso, altura, sexo, tipo_sanguineo, alergias, medicamentos_atuais, condicoes } = response.dadosUsuario;
+
+    document.getElementById('peso').value = peso;
+    document.getElementById('altura').value = altura;
+    document.getElementById('sexo').value = sexo;
+    document.getElementById('sangue').value = tipo_sanguineo;
+    document.getElementById('alergias').value = alergias;
+    document.getElementById('medicamentos').value = medicamentos_atuais;
+    document.getElementById('condicoes').value = condicoes;
+  }
+}
+
+async function consultas(idusuario) {
+  const myHeaders = new Headers()
+  myHeaders.append("Content-Type", "application/json")
+  myHeaders.append("Accept", "application/json")
+
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  }
+
+  const response =  await fetch(`http://localhost:8080/consultas?idusuario=${idusuario}`, requestOptions)
+    .then((response) => {
+      if (response?.status === 200){
+        return response.json();
+      }
+    })    
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      console.error("error => ", error)
+      return false
+    })
+  
+    console.log(response);
+  if (response?.consultas) {
+    const { medico, data_consulta, horario_consulta, especialidade, observacoes } = response.consultas;
+
+    document.getElementById('medico').innerHTML = medico;
+    document.getElementById('data-consulta').innerHTML = data_consulta;
+    document.getElementById('horario-consulta').innerHTML = horario_consulta;
+    document.getElementById('especialidade').innerHTML = especialidade;
+    document.getElementById('observacoes').innerHTML = observacoes;
+  }
 }
