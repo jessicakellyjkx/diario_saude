@@ -139,7 +139,7 @@ app.get('/consultas', function(req, res){
         res.statusCode = 200
         res.setHeader("Content-Type", "text/plain")
         res.setHeader("Access-Control-Allow-Origin", "*")
-        const response = {consultas: retorno}
+        const response = {consultas: retorno[0]}
         console.log(response)
         res.json(response)
     });
