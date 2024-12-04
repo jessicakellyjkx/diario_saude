@@ -68,6 +68,32 @@ app.post("/criar-conta", async (req, res) => {
     });
 })
 
+app.post("/adicionar-consulta", async (req, res) => {
+    const body = req.body;
+    const {medico, especialidade, local_consulta, data_consulta, horario_consulta, observacoes, idusuario} = body;
+
+    // SQL
+    let sql = `INSERT INTO consulta (medico, especialidade, local_consulta, data_consulta, horario_consulta, observacoes, idusuario) VALUES 
+                ('${name}', '${telefone}', '${dataNascimento}', '${email}', '${password}')`;
+
+    // executar comando sql
+    conexao.query(sql, function(erro, retorno){
+        //caso ocorra um erro
+        if(erro) {
+            res.statusCode = 500
+            res.setHeader("Content-Type", "text/plain")
+            res.setHeader("Access-Control-Allow-Origin", "*")
+            res.json(erro)
+        } 
+
+        // caso ocorra o cadastro
+        res.statusCode = 200
+        res.setHeader("Content-Type", "text/plain")
+        res.setHeader("Access-Control-Allow-Origin", "*")
+        res.json(retorno)
+    });
+})
+
 // rota listar dados de usuario
 app.get('/meus-dados', function(req, res){
     // SQL
@@ -123,7 +149,7 @@ app.get('/dados-usuario', function(req, res){
 // rota para listar consultas
 app.get('/consultas', function(req, res){
     // SQL
-    let sql = `SELECT * FROM consulta WHERE idusuario = ${req.query.idusuario} LIMIT 1`;
+    let sql = `SELECT * FROM consulta WHERE idusuario = ${req.query.idusuario}`;
 
     // executar comando sql
     conexao.query(sql, function(erro, retorno){

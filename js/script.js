@@ -169,12 +169,19 @@ async function consultas(idusuario) {
   
     console.log(response);
   if (response?.consultas) {
-    const { medico, data_consulta, horario_consulta, especialidade, observacoes } = response.consultas;
-
-    document.getElementById('medico').innerHTML = medico;
-    document.getElementById('data-consulta').innerHTML = data_consulta;
-    document.getElementById('horario-consulta').innerHTML = horario_consulta;
-    document.getElementById('especialidade').innerHTML = especialidade;
-    document.getElementById('observacoes').innerHTML = observacoes;
+    let consultasHtml = '';
+    response.consultas.forEach(consulta => {
+      const { medico, data_consulta, horario_consulta, especialidade, observacoes } = consulta;
+      consultasHtml += `
+        <div class="appointment">
+            <h4 id="medico">Consulta com ${medico}</h4>
+            <p><strong>Data: </strong><span>${data_consulta}</span></p>
+            <p><strong>Horário: </strong><span>${horario_consulta}</span></p>
+            <p><strong>Especialidade: </strong><span>${especialidade}</span></p>
+            <p><strong>Observações: </strong><span>${observacoes}</span></p>
+        </div>`
+    });
+    document.getElementById('consultas').innerHTML = consultasHtml;
+    
   }
 }
