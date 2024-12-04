@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Medicamento</title>
+    <link rel="stylesheet" href="css/style_AdiconarMedicamento.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="menu-icon">☰</div>
+            <h1>Francisca Cláudia da Silva</h1>
+            <div class="profile-icon">👤</div>
+        </header>
+        <main>
+            <h2>Adicionar Medicamento</h2>
+            <div class="form-container">
+                <form id="medicamento-form">
+                    <label for="nome">Nome do Medicamento:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="dosagem">Dosagem:</label>
+                    <input type="text" id="dosagem" name="dosagem" required>
+                    
+                    <label for="horarios">Horários:</label>
+                    <input type="text" id="horarios" name="horarios" required>
+                    
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" name="observacoes"></textarea>
+                    
+                    <button type="submit" class="save-button">Salvar</button>
+                </form>
+                <button class="reminder-button">⏰ Definir Lembrete</button>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

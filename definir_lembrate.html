@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definir Lembrete</title>
+    <link rel="stylesheet" href="css/style_DefinirLembrate.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="menu-icon">☰</div>
+            <h1>Francisca Cláudia da Silva</h1>
+            <div class="profile-icon">👤</div>
+        </header>
+        <main>
+            <h2>Definir Lembrete</h2>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <span id="prev-month">◀</span>
+                    <span id="current-month">Dezembro 2024</span>
+                    <span id="next-month">▶</span>
+                </div>
+                <table class="calendar">
+                    <thead>
+                        <tr>
+                            <th>DOM</th>
+                            <th>SEG</th>
+                            <th>TER</th>
+                            <th>QUA</th>
+                            <th>QUI</th>
+                            <th>SEX</th>
+                            <th>SÁB</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- Dias serão preenchidos dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group">
+                <label for="time">Horário do Lembrete:</label>
+                <input type="time" id="time" placeholder="00:00">
+            </div>
+            <div class="form-group">
+                <label for="description">Descrição:</label>
+                <textarea id="description" placeholder="Digite a descrição"></textarea>
+            </div>
+            <button class="save-button">Salvar</button>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

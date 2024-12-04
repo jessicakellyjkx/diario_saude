@@ -219,3 +219,125 @@ async function consultas(idusuario) {
     
   }
 }
+
+
+// script.js Lembrate
+document.addEventListener("DOMContentLoaded", () => {
+  const calendarBody = document.getElementById("calendar-body");
+  const currentMonth = document.getElementById("current-month");
+  const prevMonth = document.getElementById("prev-month");
+  const nextMonth = document.getElementById("next-month");
+
+  const renderCalendar = () => {
+      const daysInMonth = 31; // Dezembro
+      let html = "";
+      let day = 1;
+
+      for (let week = 0; week < 5; week++) {
+          html += "<tr>";
+          for (let weekday = 0; weekday < 7; weekday++) {
+              if (day <= daysInMonth) {
+                  html += `<td>${day}</td>`;
+                  day++;
+              } else {
+                  html += `<td></td>`;
+              }
+          }
+          html += "</tr>";
+      }
+
+      calendarBody.innerHTML = html;
+
+      document.querySelectorAll(".calendar td").forEach((cell) => {
+          cell.addEventListener("click", () => {
+              document
+                  .querySelectorAll(".calendar td")
+                  .forEach((c) => c.classList.remove("selected"));
+              cell.classList.add("selected");
+          });
+      });
+  };
+
+  renderCalendar();
+
+  prevMonth.addEventListener("click", () => alert("Mês anterior não implementado."));
+  nextMonth.addEventListener("click", () => alert("Próximo mês não implementado."));
+});
+
+
+// script.js medicamento excluir
+document.addEventListener("DOMContentLoaded", () => {
+  const deleteButton = document.getElementById("delete-button");
+  const checkboxes = document.querySelectorAll(".checkbox");
+
+  deleteButton.addEventListener("click", () => {
+      checkboxes.forEach((checkbox) => {
+          if (checkbox.checked) {
+              checkbox.parentElement.parentElement.remove();
+          }
+      });
+  });
+});
+
+
+
+// script.js notas
+document.addEventListener("DOMContentLoaded", () => {
+  const addButton = document.querySelector(".add-button");
+  const notasContainer = document.querySelector(".notas-container");
+
+  addButton.addEventListener("click", () => {
+      const newNota = document.createElement("div");
+      newNota.classList.add("nota");
+      newNota.innerHTML = `<p>Nova nota adicionada. Clique para editar.</p>`;
+      notasContainer.appendChild(newNota);
+
+      newNota.addEventListener("click", () => {
+          const texto = prompt("Edite sua nota:", newNota.innerText);
+          if (texto !== null) {
+              newNota.innerHTML = `<p>${texto}</p>`;
+          }
+      });
+  });
+
+  document.querySelectorAll(".nota").forEach((nota) => {
+      nota.addEventListener("click", () => {
+          const texto = prompt("Edite sua nota:", nota.innerText);
+          if (texto !== null) {
+              nota.innerHTML = `<p>${texto}</p>`;
+          }
+      });
+  });
+});
+
+
+
+// script.js configurações
+document.addEventListener("DOMContentLoaded", () => {
+  const saveButton = document.querySelector(".save-button");
+  const switches = document.querySelectorAll(".switch");
+
+  saveButton.addEventListener("click", () => {
+      const config = {};
+      switches.forEach((switchEl) => {
+          config[switchEl.id] = switchEl.checked;
+      });
+      alert("Configurações salvas:\n" + JSON.stringify(config, null, 2));
+  });
+});
+
+
+/* script.js  adicionar medicamentos*/
+document.getElementById("medicamento-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const nome = document.getElementById("nome").value;
+  const dosagem = document.getElementById("dosagem").value;
+  const horarios = document.getElementById("horarios").value;
+  const observacoes = document.getElementById("observacoes").value;
+
+  if (nome && dosagem && horarios) {
+      alert("Medicamento salvo com sucesso!");
+  } else {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+  }
+});

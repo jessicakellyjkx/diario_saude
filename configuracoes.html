@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="css/style_Configuracoes.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="menu-icon">☰</div>
+            <h1>Francisca Cláudia da Silva</h1>
+            <div class="profile-icon">👤</div>
+        </header>
+        <main>
+            <h2>Configurações</h2>
+            <div class="config-card">
+                <h3><span class="icon">⚙️</span> Gerenciamento da Conta</h3>
+                <div class="form-group">
+                    <label for="password">Alterar Senha:</label>
+                    <input type="password" id="password" value="**********">
+                </div>
+                <div class="form-group">
+                    <label for="email">Alterar E-mail:</label>
+                    <input type="email" id="email" value="fran87claudia@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="username">Alterar Usuário:</label>
+                    <input type="text" id="username" value="Francisca Cláudia da Silva">
+                </div>
+            </div>
+            <div class="config-card">
+                <h3><span class="icon">🔔</span> Preferências de Notificações</h3>
+                <div class="switch-group">
+                    <label for="notify-consultas">Receber notificações sobre consultas</label>
+                    <input type="checkbox" id="notify-consultas" class="switch" checked>
+                </div>
+                <div class="switch-group">
+                    <label for="notify-exams">Receber notificações sobre exames</label>
+                    <input type="checkbox" id="notify-exams" class="switch" checked>
+                </div>
+                <div class="switch-group">
+                    <label for="notify-meds">Receber notificações sobre medicamentos</label>
+                    <input type="checkbox" id="notify-meds" class="switch" checked>
+                </div>
+                <div class="switch-group">
+                    <label for="do-not-disturb">Modo Não Perturbe</label>
+                    <input type="checkbox" id="do-not-disturb" class="switch">
+                </div>
+            </div>
+            <button class="save-button">Salvar Alterações</button>
+            <button class="logout-button">Encerrar Sessão</button>
+        </main>
+    </div>
+</body>
+</html>
