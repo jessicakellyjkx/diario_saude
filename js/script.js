@@ -69,6 +69,40 @@ async function redirecionar(event) {
     })
 }
 
+async function adicionarConsulta(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+
+  const myHeaders = new Headers()
+  myHeaders.append("Content-Type", "application/json")
+  myHeaders.append("Accept", "application/json")
+
+  const raw = JSON.stringify({
+    medico: event.target.elements.medico.value,
+    especialidade: event.target.elements.especialidade.value,
+    local_consulta: event.target.elements.local.value,
+    data_consulta: event.target.elements.data.value,
+    horario_consulta: event.target.elements.horario.value,
+    observacoes: event.target.elements.observacoes.value,
+    idusuario: 1
+  })
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  }
+
+  return await fetch("http://localhost:8080/adicionar-consulta", requestOptions)
+    .then((response) => {
+      if (response?.status === 200) window.location.href = "consulta.html"; // Redireciona para "consulta.html"
+    })
+    .catch((error) => {
+      console.error("error => ", error)
+      return false
+    })
+}
+
 async function meusDados(idusuario) {
   const myHeaders = new Headers()
   myHeaders.append("Content-Type", "application/json")

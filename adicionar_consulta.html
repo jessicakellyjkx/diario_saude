@@ -19,38 +19,38 @@
         <main class="main-content">
             <h2>Adicionar Consulta</h2>
             <div class="form-container">
-                <div class="form-group">
-                    <label for="data">Data:</label>
-                    <textarea id="data" placeholder="Digite aqui..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="horario">Horário:</label>
-                    <textarea id="horario" placeholder="Digite aqui..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="local">Local:</label>
-                    <textarea id="local" placeholder="Digite aqui..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="medico">Médico:</label>
-                    <textarea id="medico" placeholder="Digite aqui..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="especialidade">Especialidade:</label>
-                    <textarea id="especialidade" placeholder="Digite aqui..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="observacoes">Observações:</label>
-                    <textarea id="observacoes" placeholder="Digite aqui..."></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="idusuario">Id do usuário:</label>
-                    <textarea id="idusuario" placeholder="Digite aqui..."></textarea>
-                </div>
-                <button class="btn save-btn">Salvar</button>
-                <button class="btn reminder-btn">Definir Lembrete</button>
+                <form onSubmit="adicionarConsulta(event)">
+                    <div class="form-group">
+                        <label for="data">Data:</label>
+                        <textarea id="data" name="data" placeholder="Digite aqui..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="horario">Horário:</label>
+                        <textarea id="horario" name="horario" placeholder="Digite aqui..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="local">Local:</label>
+                        <textarea id="local" name="local" placeholder="Digite aqui..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="medico">Médico:</label>
+                        <textarea id="medico" name="medico" placeholder="Digite aqui..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="especialidade">Especialidade:</label>
+                        <textarea id="especialidade" name="especialidade" placeholder="Digite aqui..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="observacoes">Observações:</label>
+                        <textarea id="observacoes" name="observacoes" placeholder="Digite aqui..."></textarea>
+                    </div>
+                    <button class="btn save-btn" type="submit">Salvar</button>
+                    <button class="btn reminder-btn">Definir Lembrete</button>
+
+                </form>
             </div>
         </main>
     </div>
 </body>
+<script src="js/script.js"></script>
 </html>

@@ -74,12 +74,13 @@ app.post("/adicionar-consulta", async (req, res) => {
 
     // SQL
     let sql = `INSERT INTO consulta (medico, especialidade, local_consulta, data_consulta, horario_consulta, observacoes, idusuario) VALUES 
-                ('${name}', '${telefone}', '${dataNascimento}', '${email}', '${password}')`;
+                ('${medico}', '${especialidade}', '${local_consulta}', '${data_consulta}', '${horario_consulta}', '${observacoes}', ${idusuario})`;
 
     // executar comando sql
     conexao.query(sql, function(erro, retorno){
         //caso ocorra um erro
         if(erro) {
+            console.log(erro)
             res.statusCode = 500
             res.setHeader("Content-Type", "text/plain")
             res.setHeader("Access-Control-Allow-Origin", "*")
