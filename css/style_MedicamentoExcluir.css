@@ -1,0 +1,94 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ddd;
+}
+
+.app-header h1 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: normal;
+  color: #333;
+}
+
+.menu-icon,
+.profile-icon {
+  font-size: 18px;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 18px;
+  color: #0a354d;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0a354d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.medicamentos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.medicamento {
+  background-color: #f9f9f9;
+  border: 1px solid #0a354d;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+}
+
+.medicamento-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.medicamento-info {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.checkbox {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.delete-button {
+  margin-top: 20px;
+  background-color: #e53935;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
+}
