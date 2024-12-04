@@ -102,3 +102,26 @@ main {
 .button-container button:hover {
     background-color: #d32f2f;
 }
+
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+
+}
+
+.app-header h1 {
+font-size: 16px;
+margin: 0;
+font-weight: normal;
+color: #333;
+}
+
+.menu-icon,
+.profile-icon {
+font-size: 18px;
+color: #333;
+}
