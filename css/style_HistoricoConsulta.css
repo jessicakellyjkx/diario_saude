@@ -1,0 +1,64 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+
+}
+
+.app-header h1 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: normal;
+  color: #333;
+}
+
+.menu-icon,
+.profile-icon {
+  font-size: 18px;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 26px;
+  color: #0a354d;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0a354d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.consultas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.consulta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 28px 15px;
+  border-radius: 5px;
+}
+
+.consulta span {
+  font-size: 18px;
+  color: #333;
+}
