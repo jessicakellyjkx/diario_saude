@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffff;
+  color: #333;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00897b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.menu-icon, .user-icon {
+  font-size: 18px;
+}
+
+.sub-title {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #00897b;
+  text-align: center;
+}
+
+.appointment {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.appointment p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-button {
+  display: block;
+  width: 100%;
+  background-color: #00897b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-button:hover {
+  background-color: #00796b;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+
+}
+
+.app-header h1 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: normal;
+  color: #333;
+}
+
+.menu-icon,
+.profile-icon {
+  font-size: 18px;
+  color: #333;
+}
