@@ -7,7 +7,6 @@ body {
 }
 
 
-
 .app-header {
   display: flex;
   justify-content: space-between;
@@ -50,32 +49,24 @@ main h2 {
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 20px;
-  text-align: left;
 }
 
-.form-group {
-  margin-bottom: 10px;
-}
-
-.form-group label {
-  font-size: 14px;
-  font-weight: bold;
+form label {
   display: block;
+  font-size: 14px;
   margin-bottom: 5px;
+  text-align: left;
+  color: #333;
 }
 
-.form-group input,
-.form-group textarea {
+form input,
+form textarea {
   width: 100%;
   padding: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
   border-radius: 5px;
-}
-
-textarea {
-  resize: none;
-  height: 60px;
+  font-size: 14px;
 }
 
 .save-button {
@@ -88,7 +79,6 @@ textarea {
   cursor: pointer;
   width: 100%;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .save-button:hover {
@@ -96,8 +86,8 @@ textarea {
 }
 
 .reminder-button {
-  background-color: #e0e0e0;
-  color: #333;
+  background-color: #dddddd;
+  color: #333333;
   border: none;
   border-radius: 8px;
   padding: 10px;
@@ -108,5 +98,5 @@ textarea {
 }
 
 .reminder-button:hover {
-  background-color: #c9c9c9;
+  background-color: #cccccc;
 }

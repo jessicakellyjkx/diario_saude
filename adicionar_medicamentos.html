@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Medicamento</title>
-    <link rel="stylesheet" href="cssstyle_AdiconarMedicamento.css">
+    <link rel="stylesheet" href="css/style_AdiconarMedicamento.css">
 </head>
 <body>
     <div class="app-container">
@@ -16,26 +16,25 @@
         <main>
             <h2>Adicionar Medicamento</h2>
             <div class="form-container">
-                <div class="form-group">
-                    <label>Nome do Medicamento:</label>
-                    <input type="text" placeholder="Digite o nome">
-                </div>
-                <div class="form-group">
-                    <label>Dosagem:</label>
-                    <input type="text" placeholder="Ex.: 500mg">
-                </div>
-                <div class="form-group">
-                    <label>Horários:</label>
-                    <input type="text" placeholder="Ex.: 8h, 14h">
-                </div>
-                <div class="form-group">
-                    <label>Observações:</label>
-                    <textarea placeholder="Digite as observações"></textarea>
-                </div>
+                <form id="medicamento-form">
+                    <label for="nome">Nome do Medicamento:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="dosagem">Dosagem:</label>
+                    <input type="text" id="dosagem" name="dosagem" required>
+                    
+                    <label for="horarios">Horários:</label>
+                    <input type="text" id="horarios" name="horarios" required>
+                    
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" name="observacoes"></textarea>
+                    
+                    <button type="submit" class="save-button">Salvar</button>
+                </form>
+                <button class="reminder-button">⏰ Definir Lembrete</button>
             </div>
-            <button class="save-button">Salvar</button>
-            <button class="reminder-button">⏰ Definir Lembrete</button>
         </main>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

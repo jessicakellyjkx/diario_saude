@@ -286,3 +286,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+/* script.js  adicionar medicamentos*/
+document.getElementById("medicamento-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const nome = document.getElementById("nome").value;
+  const dosagem = document.getElementById("dosagem").value;
+  const horarios = document.getElementById("horarios").value;
+  const observacoes = document.getElementById("observacoes").value;
+
+  if (nome && dosagem && horarios) {
+      alert("Medicamento salvo com sucesso!");
+  } else {
+      alert("Por favor, preencha todos os campos obrigatórios.");
+  }
+});
