@@ -103,6 +103,40 @@ async function adicionarConsulta(event) {
     })
 }
 
+async function adicionarMedicamento(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+
+  const myHeaders = new Headers()
+  myHeaders.append("Content-Type", "application/json")
+  myHeaders.append("Accept", "application/json")
+
+  const raw = JSON.stringify({
+    nome: event.target.elements.nome.value,
+    sigla: event.target.elements.sigla.value,
+    dosagem: event.target.elements.dosagem.value,
+    frequencia: event.target.elements.frequencia.value,
+    data_medicamento: event.target.elements.data.value,
+    horario_medicamento: event.target.elements.horarios.value,
+    idusuario: 1
+  })
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  }
+
+  return await fetch("http://localhost:8080/adicionar-medicamento", requestOptions)
+    .then((response) => {
+      if (response?.status === 200) window.location.href = "medicamentos.html"; // Redireciona para "medicamentos.html"
+    })
+    .catch((error) => {
+      console.error("error => ", error)
+      return false
+    })
+}
+
 async function meusDados(idusuario) {
   const myHeaders = new Headers()
   myHeaders.append("Content-Type", "application/json")
@@ -216,6 +250,55 @@ async function consultas(idusuario) {
         </div>`
     });
     document.getElementById('consultas').innerHTML = consultasHtml;
+  }
+}
+
+async function medicamentos(idusuario) {
+  const myHeaders = new Headers()
+  myHeaders.append("Content-Type", "application/json")
+  myHeaders.append("Accept", "application/json")
+
+  const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow",
+  }
+
+  const response =  await fetch(`http://localhost:8080/medicamentos?idusuario=${idusuario}`, requestOptions)
+    .then((response) => {
+      if (response?.status === 200){
+        return response.json();
+      }
+    })    
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      console.error("error => ", error)
+      return false
+    })
+  
+    console.log(response);
+  if (response?.medicamentos) {
+    let medicamentosHtml = '';
+    response.medicamentos.forEach(medicamento => {
+      const { nome, sigla, dosagem, frequencia, data_medicamento, horario_medicamento } = medicamento;
+      medicamentosHtml += `
+        <div class="medicamento">
+                    <div class="medicamento-header">
+                        <span>${nome}</span>
+                        <span class="edit-icon">✎</span>
+                    </div>
+                    <div class="medicamento-info">
+                        <p>Sigla: ${sigla}</p>
+                        <p>Dosagem: ${dosagem}</p>
+                        <p>Frequência: ${frequencia}</p>
+                        <p>Data: ${data_medicamento}</p>
+                        <p>Horários: ${horario_medicamento}</p>
+                    </div>
+                </div>`
+    });
+    document.getElementById('medicamentos').innerHTML = medicamentosHtml;
     
   }
 }

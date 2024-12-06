@@ -93,7 +93,34 @@ app.post("/adicionar-consulta", async (req, res) => {
         res.setHeader("Access-Control-Allow-Origin", "*")
         res.json(retorno)
     });
-})
+});
+
+app.post("/adicionar-medicamento", async (req, res) => {
+    const body = req.body;
+    const {nome, sigla, dosagem, frequencia, data_medicamento, horario_medicamento, idusuario} = body;
+
+    // SQL
+    let sql = `INSERT INTO medicamento (nome, sigla, dosagem, frequencia, data_medicamento, horario_medicamento, idusuario) VALUES 
+                ('${nome}', '${sigla}', '${dosagem}', '${frequencia}', '${data_medicamento}', '${horario_medicamento}', ${idusuario})`;
+
+    // executar comando sql
+    conexao.query(sql, function(erro, retorno){
+        //caso ocorra um erro
+        if(erro) {
+            console.log(erro)
+            res.statusCode = 500
+            res.setHeader("Content-Type", "text/plain")
+            res.setHeader("Access-Control-Allow-Origin", "*")
+            res.json(erro)
+        } 
+
+        // caso ocorra o cadastro
+        res.statusCode = 200
+        res.setHeader("Content-Type", "text/plain")
+        res.setHeader("Access-Control-Allow-Origin", "*")
+        res.json(retorno)
+    });
+});
 
 // rota listar dados de usuario
 app.get('/meus-dados', function(req, res){
@@ -172,6 +199,33 @@ app.get('/consultas', function(req, res){
     });
 
 });
+
+app.get('/medicamentos', function(req, res){
+    // SQL
+    let sql = `SELECT * FROM medicamento WHERE idusuario = ${req.query.idusuario}`;
+
+    // executar comando sql
+    conexao.query(sql, function(erro, retorno){
+        //caso ocorra um erro
+        if(erro) {
+            res.statusCode = 500
+            res.setHeader("Content-Type", "text/plain")
+            res.setHeader("Access-Control-Allow-Origin", "*")
+            res.json(erro)
+        } 
+
+        // caso ocorra o cadastro
+        res.statusCode = 200
+        res.setHeader("Content-Type", "text/plain")
+        res.setHeader("Access-Control-Allow-Origin", "*")
+        const response = {medicamentos: retorno}
+        console.log(response)
+        res.json(response)
+    });
+
+});
+
+
 
 // Servidor
 app.listen(8080);

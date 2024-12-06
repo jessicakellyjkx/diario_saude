@@ -16,39 +16,18 @@
         <main>
             <h2>Meus Medicamentos</h2>
             <div class="medicamentos-container">
-                <div class="medicamento">
-                    <div class="medicamento-header">
-                        <span>Paracetamol</span>
-                        <span class="edit-icon">✎</span>
-                    </div>
-                    <div class="medicamento-info">
-                        <p>Dosagem: 500mg</p>
-                        <p>Horários: 8h, 14h, 20h</p>
-                    </div>
-                </div>
-                <div class="medicamento">
-                    <div class="medicamento-header">
-                        <span>Ibuprofeno</span>
-                        <span class="edit-icon">✎</span>
-                    </div>
-                    <div class="medicamento-info">
-                        <p>Dosagem: 200mg</p>
-                        <p>Horários: 7h, 17h, 21h</p>
-                    </div>
-                </div>
-                <div class="medicamento">
-                    <div class="medicamento-header">
-                        <span>Amoxicilina</span>
-                        <span class="edit-icon">✎</span>
-                    </div>
-                    <div class="medicamento-info">
-                        <p>Dosagem: 100mg</p>
-                        <p>Horários: 10h, 20h</p>
-                    </div>
+                <div id="medicamentos">
+
                 </div>
             </div>
             <button class="add-button">Adicionar Medicamento</button>
         </main>
     </div>
 </body>
+<script src="js/script.js"></script>
+<script>
+    window.onload = (event) => {
+        medicamentos(1);
+    };
+</script>
 </html>
