@@ -1,15 +1,8 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-}
-.container {
-  max-width: 400px;
-  margin: auto;
-  background-color: #fff;
-  padding: 10px;
+  padding-top: 20px; /* Ajuste o valor conforme necessário */
 }
 
 .header {
@@ -41,51 +34,8 @@ body {
   cursor: pointer;
 }
 
-.section {
-  padding: 80px 20px 20px 20px;
-}
-.section h3 {
-  font-size: 22px;
-  color: #003b50;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  border-bottom: 2px solid #003b50;
-  padding-bottom: 10px;
-}
-.form-group {
-  margin: 20px 0;
-}
-.form-group label {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  display: block;
-  margin-bottom: 5px;
-}
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 14px;
-  color: #333;
-  background-color: #f9f9f9;
-}
-.form-inline {
-  display: flex;
-  gap: 10px;
-}
-.form-inline .form-group {
-  flex: 1;
-}
-.form-group input[readonly] {
-  color: #333;
-  font-weight: bold;
-  background-color: #f9f9f9;
-}
 
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -97,10 +47,15 @@ body {
   overflow-y: auto;
   transition: left 0.3s;
   padding-top: 20px;
+  z-index: 1000; /* Garante que a sidebar fique acima de outros elementos */
 }
+
+/* Exibição da sidebar */
 .sidebar.show {
   left: 0;
 }
+
+/* Botão de fechar */
 .sidebar .close-btn {
   position: absolute;
   top: 10px;
@@ -109,14 +64,19 @@ body {
   cursor: pointer;
   color: #fff;
 }
+
+/* Título */
 .sidebar h3 {
   margin-left: 15px;
   margin-bottom: 10px;
 }
+
+/* Estilos para a lista de itens */
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
+
 .sidebar ul li {
   padding: 10px 15px;
   cursor: pointer;
@@ -124,23 +84,36 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 .sidebar ul li i {
   margin-right: 10px;
 }
+
 .sidebar ul li:hover {
   background-color: #3e8e41;
 }
+
+/* Ícones sociais */
 .social-icons {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-top: 20px;
 }
+
 .social-icons i {
   font-size: 20px;
 }
+
+/* Rodapé */
 .footer-text {
   text-align: center;
   font-size: 12px;
   margin: 10px 0;
+}
+
+/* Ajuste no Header para garantir que ele não seja sobreposto pela sidebar */
+.app-header {
+  position: relative; /* Posiciona o header normalmente */
+  z-index: 500; /* Um valor menor para o header que o da sidebar */
 }

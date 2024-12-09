@@ -1,0 +1,65 @@
+/* styles.css */
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+
+.menu-icon,
+.profile-icon {
+  font-size: 18px;
+  color: #333;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 18px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0a354d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.notas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nota {
+  background-color: #f9f9f9;
+  border: 1px solid #0a354d;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #086399;
+}

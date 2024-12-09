@@ -300,3 +300,16 @@ document.getElementById("medicamento-form").addEventListener("submit", function(
       alert("Por favor, preencha todos os campos obrigatórios.");
   }
 });
+
+
+
+// Função para carregar o menu lateral
+function loadSidebar() {
+    fetch('sidebar.html') // Caminho do arquivo HTML que contém o menu lateral
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('sidebar-container').innerHTML = data;
+            document.querySelector('.sidebar').classList.add('show'); // Abre a sidebar
+        })
+        .catch(error => console.error('Erro ao carregar a sidebar:', error));
+}

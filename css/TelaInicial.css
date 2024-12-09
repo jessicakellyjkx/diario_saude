@@ -1,10 +1,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
 }
+
 .container {
   max-width: 400px;
   margin: auto;
@@ -12,36 +10,6 @@ body {
   padding: 10px;
 }
 
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 7px 15px;
-  border-bottom: 1px solid #ddd;
-  position: fixed;
-  top: 0; 
-  left: 0;
-  width: 93%;
-  max-width: 361px; 
-  background-color: #fff; 
-  z-index: 1000; 
-}
-
-.header h2 {
-  font-size: 16px;
-  font-weight: normal;
-  color: #333;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-}
-.header i, .header span {
-  color: #4CAF50; 
-  font-size: 18px;
-  cursor: pointer;
-}
 .section {
   padding: 20px 10px;
 }
