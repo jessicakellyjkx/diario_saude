@@ -222,7 +222,32 @@ app.get('/medicamentos', function(req, res){
         console.log(response)
         res.json(response)
     });
+});
 
+app.post("/login", async (req, res) => {
+    const body = req.body;
+    const {email, senha} = body;
+
+    // SQL
+    let sql = `SELECT idusuario FROM usuario WHERE email = "${email}" AND senha = "${senha}"`;
+
+    // executar comando sql
+    conexao.query(sql, function(erro, retorno){
+        //caso ocorra um erro
+        if(erro) {
+            console.log(erro)
+            res.statusCode = 500
+            res.setHeader("Content-Type", "text/plain")
+            res.setHeader("Access-Control-Allow-Origin", "*")
+            res.json(erro)
+        } 
+
+        // caso ocorra o cadastro
+        res.statusCode = 200
+        res.setHeader("Content-Type", "text/plain")
+        res.setHeader("Access-Control-Allow-Origin", "*")
+        res.json(retorno[0])
+    });
 });
 
 

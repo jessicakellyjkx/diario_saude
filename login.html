@@ -159,7 +159,7 @@
 
   <h2>Bem-vindo de volta!</h2>
   <div class="login-box">
-    <form onsubmit="entrar(event)">
+    <form onsubmit="login(event)">
         <label for="email">Digite seu email:</label>
         <input type="email" id="email" name="email" required>
 
@@ -180,12 +180,6 @@
       <p>© 2024 Diário da Saúde</p>
   </footer>
 
-  <script>
-      function entrar(event) {
-          event.preventDefault();
-          window.location.href = "tela_inicial.html";
-      }
-  </script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>
