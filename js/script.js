@@ -313,3 +313,7 @@ function loadSidebar() {
         })
         .catch(error => console.error('Erro ao carregar a sidebar:', error));
 }
+
+
+// index
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,52 +8,54 @@
   <link rel="stylesheet" href="css/principal.css">
   <link rel="stylesheet" href="css/MinhasConsultas.css">
 </head>
+
 <body>
   <div class="container">
     <div class="header">
-      <i class="fas fa-bars" onclick="toggleSidebar()"></i> <!-- Ícone de menu à esquerda -->
-      <h2>Francisca Cláudia da Silva</h2> <!-- Texto centralizado -->
-      <i class="fas fa-user"></i> <!-- Ícone de usuário à direita -->
+      <i class="fas fa-bars" onclick="toggleSidebar()"></i>
+      <h2>Francisca Cláudia da Silva</h2>
+      <i class="fas fa-user"></i>
     </div>
-    <!-- Menu Lateral -->
     <div class="sidebar" id="sidebar">
       <i class="fas fa-times close-btn" onclick="toggleSidebar()"></i>
-      <h3>Perfil de Saúde</h3>
+      <a href="tela_inicial.html">
+        <h3>Perfil de Saúde</h3>
+      </a>
       <ul>
-          <li><i class="fas fa-file-medical-alt"></i> Gerenciamento de Exames <i class="fas fa-chevron-down"></i></li>
-          <li><i class="fas fa-calendar-check"></i> Registro de Consultas <i class="fas fa-chevron-down"></i></li>
-          <li><i class="fas fa-bell"></i> Notificações e Lembretes <i class="fas fa-chevron-down"></i></li>
+        <li><i class="fas fa-file-medical-alt"></i> Gerenciamento de Exames <i class="fas fa-chevron-down"></i></li>
+        <li><i class="fas fa-calendar-check"></i> Registro de Consultas <i class="fas fa-chevron-down"></i></li>
+        <li><i class="fas fa-bell"></i> Notificações e Lembretes <i class="fas fa-chevron-down"></i></li>
       </ul>
       <h3>Contatos</h3>
       <ul>
-          <li><i class="fas fa-user-friends"></i> Gerenciar meus Contatos <i class="fas fa-chevron-down"></i></li>
-          <li><i class="fas fa-phone-alt"></i> Contatos de Emergência <i class="fas fa-chevron-down"></i></li>
+        <li><i class="fas fa-user-friends"></i> Gerenciar meus Contatos <i class="fas fa-chevron-down"></i></li>
+        <li><i class="fas fa-phone-alt"></i> Contatos de Emergência <i class="fas fa-chevron-down"></i></li>
       </ul>
       <h3>Meus Perfis</h3>
       <ul>
-          <li><i class="fas fa-exchange-alt"></i> Trocar de Perfil</li>
-          <li><i class="fas fa-cog"></i> Configurações do Perfil</li>
+        <li><i class="fas fa-exchange-alt"></i> Trocar de Perfil</li>
+        <li><i class="fas fa-cog"></i> Configurações do Perfil</li>
       </ul>
       <ul>
-          <li style="padding: 15px; color: #fff; background-color: #333; text-align: center;">Sair</li>
+        <li style="padding: 15px; color: black; background-color: white; text-align: center;">Sair</li>
       </ul>
       <div class="social-icons">
-          <i class="fab fa-youtube"></i>
-          <i class="fab fa-facebook"></i>
-          <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
       </div>
       <div class="footer-text">2024 - Todos os direitos reservados</div>
-  </div>
-
-  <main class="main-content">
-    <h1>Minhas Consultas</h1>
-    <div class="buttons">
-      <a href="consultas_agendadas.html" class="btn">Consultas Agendadas</a>
-      <span class="text-below">Adicionar Medicamento</span>
-      <a href="historico_consulta.html" class="btn">Histórico de Consultas</a>
     </div>
-  </main>  
+
+    <main class="main-content">
+      <h1>Minhas Consultas</h1>
+      <div class="buttons">
+        <a href="consultas_agendadas.html" class="btn">Consultas Agendadas</a>
+        <a href="historico_consulta.html" class="btn">Histórico de Consultas</a>
+      </div>
+    </main>
   </div>
   <script src="js/script.js"></script>
 </body>
+
 </html>

@@ -12,6 +12,7 @@ body {
 }
 
 main {
+  background-color: white;
   padding: 20px;
 }
 
@@ -89,7 +90,7 @@ main h2 {
 }
 
 .switch:checked {
-  background: #0a354d;
+  background: #3ABA7D;
 }
 
 .switch:before {
@@ -109,7 +110,7 @@ main h2 {
 }
 
 .save-button {
-  background-color: #0a354d;
+  background-color: #3ABA7D;
   color: #ffffff;
   border: none;
   border-radius: 8px;

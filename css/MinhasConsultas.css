@@ -52,7 +52,7 @@ main h1 {
 }
 
 .btn {
-  background-color: #28a745;
+  background-color: #3ABA7D;
   color: #fff;
   font-size: 16px;
   padding: 15px;
@@ -63,7 +63,7 @@ main h1 {
 }
 
 .btn:hover {
-  background-color: #218838;
+  background-color: #3ABA7D;
 }
 
 
@@ -90,6 +90,6 @@ main h1 {
 }
 
 a {
-  text-decoration: none;  /* Remove o sublinhado */
+  text-decoration: none;
+  /* Remove o sublinhado */
 }
-

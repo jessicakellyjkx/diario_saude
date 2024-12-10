@@ -2,7 +2,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  padding-top: 20px; /* Ajuste o valor conforme necessário */
+  padding-top: 20px;
+  /* Ajuste o valor conforme necessário */
 }
 
 .header {
@@ -19,6 +20,7 @@ body {
   background-color: #fff;
   z-index: 1000;
 }
+
 .header h2 {
   font-size: 16px;
   font-weight: normal;
@@ -28,6 +30,7 @@ body {
   transform: translateX(-50%);
   margin: 0;
 }
+
 .header i {
   color: #4CAF50;
   font-size: 18px;
@@ -42,12 +45,13 @@ body {
   left: -100%;
   width: 250px;
   height: 100%;
-  background-color: #4CAF50;
+  background-color: #3ABA7D;
   color: #fff;
   overflow-y: auto;
   transition: left 0.3s;
   padding-top: 20px;
-  z-index: 1000; /* Garante que a sidebar fique acima de outros elementos */
+  z-index: 1000;
+  /* Garante que a sidebar fique acima de outros elementos */
 }
 
 /* Exibição da sidebar */
@@ -69,6 +73,9 @@ body {
 .sidebar h3 {
   margin-left: 15px;
   margin-bottom: 10px;
+}
+.sidebar h3 a{
+  text-decoration: none;
 }
 
 /* Estilos para a lista de itens */
@@ -112,8 +119,12 @@ body {
   margin: 10px 0;
 }
 
-/* Ajuste no Header para garantir que ele não seja sobreposto pela sidebar */
 .app-header {
-  position: relative; /* Posiciona o header normalmente */
-  z-index: 500; /* Um valor menor para o header que o da sidebar */
+  position: relative;
+  z-index: 500;
+}
+
+a {
+  color: inherit; 
+  text-decoration: none; 
 }
