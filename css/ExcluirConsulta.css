@@ -1,8 +1,5 @@
-
 body {
     font-family: 'Raleway', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
 }
 
@@ -16,24 +13,6 @@ body {
     overflow: auto;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #00796b;
-    color: white;
-}
-
-header h1 {
-    font-size: 18px;
-    margin: 0;
-}
-
-header img {
-    width: 24px;
-    height: 24px;
-}
 
 main {
     padding: 20px;
@@ -79,7 +58,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #333;
     font-size: 14px;
 }
 
@@ -90,7 +69,7 @@ main {
 
 .button-container button {
     background-color: #e53935;
-    color: white;
+    color: #333;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -114,14 +93,14 @@ main {
 }
 
 .app-header h1 {
-font-size: 16px;
-margin: 0;
-font-weight: normal;
-color: #333;
+    font-size: 16px;
+    margin: 0;
+    font-weight: normal;
+    color: #333;
 }
 
 .menu-icon,
 .profile-icon {
-font-size: 18px;
-color: #333;
+    font-size: 18px;
+    color: #333;
 }

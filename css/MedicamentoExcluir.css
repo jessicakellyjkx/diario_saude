@@ -1,27 +1,10 @@
 /* styles.css */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f9f9f9;
 }
 
 
-.app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #f1f1f1;
-  border-bottom: 1px solid #ddd;
-}
-
-.app-header h1 {
-  font-size: 16px;
-  margin: 0;
-  font-weight: normal;
-  color: #333;
-}
 
 .menu-icon,
 .profile-icon {
@@ -32,6 +15,7 @@ body {
 main {
   padding: 20px;
   text-align: center;
+  background-color: white;
 }
 
 main h2 {
@@ -54,31 +38,30 @@ main h2 {
   border: 1px solid #0a354d;
   border-radius: 8px;
   padding: 10px;
+  text-align: left;
 }
 
 .medicamento-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .medicamento-info {
   margin-top: 5px;
   font-size: 12px;
-  text-align: left;
 }
 
-.edit-icon {
-  font-size: 14px;
-  color: #0a354d;
+.checkbox {
+  transform: scale(1.2);
   cursor: pointer;
 }
 
-.add-button {
+.delete-button {
   margin-top: 20px;
-  background-color: #0a354d;
+  background-color: #e53935;
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -89,6 +72,6 @@ main h2 {
   text-transform: uppercase;
 }
 
-.add-button:hover {
-  background-color: #086399;
+.delete-button:hover {
+  background-color: #c62828;
 }

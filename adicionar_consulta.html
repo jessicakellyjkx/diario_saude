@@ -1,21 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Consulta</title>
-    <link rel="stylesheet" href="css/style_AdicionarConsulta.css">
-    <link rel="stylesheet" href="css/style_ConsultasAgendadas.css">
+    <link rel="stylesheet" href="css/AdicionarConsulta.css">
+    <link rel="stylesheet" href="css/principal.css">
 </head>
+
 <body>
     <div class="app-container">
-      <header class="header">
-        <div class="menu-icon">☰</div>
-        <div class="user-info">
-          <span class="user-name">Francisca Cláudia da Silva</span>
-          <div class="user-icon">👤</div>
+        <div class="header">
+            <i class="fas fa-bars" onclick="toggleSidebar()"></i> <!-- Ícone de menu à esquerda -->
+            <h2>Francisca Cláudia da Silva</h2> <!-- Texto centralizado -->
+            <i class="fas fa-user"></i> <!-- Ícone de usuário à direita -->
         </div>
-      </header>
+
+        <!-- Menu Lateral -->
+        <div class="sidebar" id="sidebar">
+            <i class="fas fa-times close-btn" onclick="toggleSidebar()"></i>
+            <a href="tela_inicial.html">
+                <h3>Perfil de Saúde</h3>
+            </a>
+            <ul>
+                <li><i class="fas fa-file-medical-alt"></i> Gerenciamento de Exames <i class="fas fa-chevron-down"></i>
+                </li>
+                <li><i class="fas fa-calendar-check"></i> Registro de Consultas <i class="fas fa-chevron-down"></i></li>
+                <li><i class="fas fa-bell"></i> Notificaçõ
+                    <!DOCTYPE html>
+                    <html lang="pt-BR">
+
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Adicionar Consulta</title>
+                        <link rel="stylesheet" href="css/AdicionarConsulta.css">
+                        <link rel="stylesheet" href="css/principal.css">
+                    </head>
+
+                    <body>
+                        <div class="app-container">
+                            <div class="header">
+                                <i class="fas fa-bars" onclick="toggleSidebar()"></i>
+                                <h2>Francisca Cláudia da Silva</h2>
+                                <i class="fas fa-user"></i>
+                            </div>
+
+                            <div class="sidebar" id="sidebar">
+                                <i class="fas fa-times close-btn" onclick="toggleSidebar()"></i>
+                                <a href="tela_inicial.html">
+                                    <h3>Perfil de Saúde</h3>
+                                </a>
+                                <ul>
+                                    <li><i class="fas fa-file-medical-alt"></i> Gerenciamento de Exames <i
+                                            class="fas fa-chevron-down"></i></li>
+                                    <li><i class="fas fa-calendar-check"></i> Registro de Consultas <i
+                                            class="fas fa-chevron-down"></i></li>
+                                    <li><i class="fas fa-bell"></i> Notificações e Lembretes <i
+                                            class="fas fa-chevron-down"></i></li>
+                                </ul>
+                                <h3>Contatos</h3>
+                                <ul>
+                                    <li><i class="fas fa-user-friends"></i> Gerenciar meus Contatos <i
+                                            class="fas fa-chevron-down"></i></li>
+                                    <li><i class="fas fa-phone-alt"></i> Contatos de Emergência <i
+                                            class="fas fa-chevron-down"></i></li>
+                                </ul>
+                                <h3>Meus Perfis</h3>
+                                <ul>
+                                    <li><i class="fas fa-exchange-alt"></i> Trocar de Perfil</li>
+                                    <li><i class="fas fa-cog"></i> Configurações do Perfil</li>
+                                </ul>
+                                <ul>
+                                    <li
+                                        style="padding: 15px; color: black; background-color: white; text-align: center;">
+                                        Sair</li>
+                                </ul>
+                                <div class="social-icons">
+                                    <i class="fab fa-youtube"></i>
+                                    <i class="fab fa-facebook"></i>
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="footer-text">2024 - Todos os direitos reservados</div>
+                            </div>
+                            <main class="main-content">
+                                <h2>Adicionar Consulta</h2>
+                                <div class="form-container">
+                                    <div class="form-group">
+                                        <label for="data-horario">Data e Horário:</label>
+                                        <textarea id="data-horario" placeholder="Digite aqui..."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="local">Local:</label>
+                                        <textarea id="local" placeholder="Digite aqui..."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="medico">Médico:</label>
+                                        <textarea id="medico" placeholder="Digite aqui..."></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="observacoes">Observações:</label>
+                                        <textarea id="observacoes" placeholder="Digite aqui..."></textarea>
+                                    </div>
+                                    <button class="btn save-btn">Salvar</button>
+                                    <button class="btn reminder-btn">Definir Lembrete</button>
+                                </div>
+                            </main>
+                        </div>
+                        <script src="js/script.js"></script>
+                    </body>
+
+                    </html>
+                    es e Lembretes <i class="fas fa-chevron-down"></i>
+                </li>
+            </ul>
+            <h3>Contatos</h3>
+            <ul>
+                <li><i class="fas fa-user-friends"></i> Gerenciar meus Contatos <i class="fas fa-chevron-down"></i></li>
+                <li><i class="fas fa-phone-alt"></i> Contatos de Emergência <i class="fas fa-chevron-down"></i></li>
+            </ul>
+            <h3>Meus Perfis</h3>
+            <ul>
+                <li><i class="fas fa-exchange-alt"></i> Trocar de Perfil</li>
+                <li><i class="fas fa-cog"></i> <a href="configuracoes.html">Configurações do Perfil</a></li>
+            </ul>
+            <ul>
+                <li style="padding: 15px; color: black; background-color: white; text-align: center;">Sair</li>
+            </ul>
+            <div class="social-icons">
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="footer-text">2024 - Todos os direitos reservados</div>
+        </div>
         <main class="main-content">
             <h2>Adicionar Consulta</h2>
             <div class="form-container">
@@ -48,9 +167,27 @@
                     <button class="btn reminder-btn">Definir Lembrete</button>
 
                 </form>
-            </div>
-        </main>
+                <div class="form-group">
+                    <label for="data-horario">Data e Horário:</label>
+                    <textarea id="data-horario" placeholder="Digite aqui..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="local">Local:</label>
+                    <textarea id="local" placeholder="Digite aqui..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="medico">Médico:</label>
+                    <textarea id="medico" placeholder="Digite aqui..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes" placeholder="Digite aqui..."></textarea>
+                </div>
+                <button class="btn save-btn">Salvar</button>
+                <a href="definir_lembrate.html"><button class="btn reminder-btn">Definir Lembrete</button></a>
     </div>
+    <script src="js/script.js"></script>
 </body>
 <script src="js/script.js"></script>
+</html>
 </html>

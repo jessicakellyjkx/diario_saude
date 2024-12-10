@@ -1,10 +1,10 @@
 /* styles.css */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f9f9f9;
+  ;
 }
+
 
 
 .app-header {
@@ -31,6 +31,7 @@ body {
 
 main {
   padding: 20px;
+  text-align: center;
 }
 
 main h2 {
@@ -42,29 +43,53 @@ main h2 {
   padding-bottom: 5px;
 }
 
-.config-card {
+.calendar-container {
   background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  border: 1px solid #0a354d;
   border-radius: 8px;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 20px;
 }
 
-.config-card h3 {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 10px;
+.calendar-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.icon {
-  font-size: 18px;
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.calendar th {
+  font-weight: bold;
+  color: #0a354d;
+  padding: 5px 0;
+}
+
+.calendar td {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.calendar td.selected {
+  background-color: #0a354d;
+  color: #fff;
+}
+
+.calendar td:hover {
+  background-color: #086399;
+  color: #fff;
 }
 
 .form-group {
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .form-group label {
@@ -73,57 +98,18 @@ main h2 {
   margin-bottom: 5px;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 8px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fffeca;
 }
 
-.switch-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.switch-group label {
-  font-size: 14px;
-}
-
-.switch {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 40px;
-  height: 20px;
-  background: #ccc;
-  border-radius: 20px;
-  position: relative;
-  outline: none;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.switch:checked {
-  background: #0a354d;
-}
-
-.switch:before {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  background: #fff;
-  border-radius: 50%;
-  top: 1px;
-  left: 1px;
-  transition: transform 0.3s;
-}
-
-.switch:checked:before {
-  transform: translateX(20px);
+textarea {
+  resize: none;
+  height: 60px;
 }
 
 .save-button {
@@ -136,25 +122,8 @@ main h2 {
   cursor: pointer;
   width: 100%;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .save-button:hover {
   background-color: #086399;
-}
-
-.logout-button {
-  background-color: #e53935;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px;
-  font-size: 14px;
-  cursor: pointer;
-  width: 100%;
-  text-transform: uppercase;
-}
-
-.logout-button:hover {
-  background-color: #c62828;
 }
