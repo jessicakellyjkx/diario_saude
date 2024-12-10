@@ -68,6 +68,60 @@ app.post("/criar-conta", async (req, res) => {
     });
 })
 
+app.post("/adicionar-consulta", async (req, res) => {
+    const body = req.body;
+    const {medico, especialidade, local_consulta, data_consulta, horario_consulta, observacoes, idusuario} = body;
+
+    // SQL
+    let sql = `INSERT INTO consulta (medico, especialidade, local_consulta, data_consulta, horario_consulta, observacoes, idusuario) VALUES 
+                ('${medico}', '${especialidade}', '${local_consulta}', '${data_consulta}', '${horario_consulta}', '${observacoes}', ${idusuario})`;
+
+    // executar comando sql
+    conexao.query(sql, function(erro, retorno){
+        //caso ocorra um erro
+        if(erro) {
+            console.log(erro)
+            res.statusCode = 500
+            res.setHeader("Content-Type", "text/plain")
+            res.setHeader("Access-Control-Allow-Origin", "*")
+            res.json(erro)
+        } 
+
+        // caso ocorra o cadastro
+        res.statusCode = 200
+        res.setHeader("Content-Type", "text/plain")
+        res.setHeader("Access-Control-Allow-Origin", "*")
+        res.json(retorno)
+    });
+});
+
+app.post("/adicionar-medicamento", async (req, res) => {
+    const body = req.body;
+    const {nome, sigla, dosagem, frequencia, data_medicamento, horario_medicamento, idusuario} = body;
+
+    // SQL
+    let sql = `INSERT INTO medicamento (nome, sigla, dosagem, frequencia, data_medicamento, horario_medicamento, idusuario) VALUES 
+                ('${nome}', '${sigla}', '${dosagem}', '${frequencia}', '${data_medicamento}', '${horario_medicamento}', ${idusuario})`;
+
+    // executar comando sql
+    conexao.query(sql, function(erro, retorno){
+        //caso ocorra um erro
+        if(erro) {
+            console.log(erro)
+            res.statusCode = 500
+            res.setHeader("Content-Type", "text/plain")
+            res.setHeader("Access-Control-Allow-Origin", "*")
+            res.json(erro)
+        } 
+
+        // caso ocorra o cadastro
+        res.statusCode = 200
+        res.setHeader("Content-Type", "text/plain")
+        res.setHeader("Access-Control-Allow-Origin", "*")
+        res.json(retorno)
+    });
+});
+
 // rota listar dados de usuario
 app.get('/meus-dados', function(req, res){
     // SQL
@@ -123,7 +177,7 @@ app.get('/dados-usuario', function(req, res){
 // rota para listar consultas
 app.get('/consultas', function(req, res){
     // SQL
-    let sql = `SELECT * FROM consulta WHERE idusuario = ${req.query.idusuario} LIMIT 1`;
+    let sql = `SELECT * FROM consulta WHERE idusuario = ${req.query.idusuario}`;
 
     // executar comando sql
     conexao.query(sql, function(erro, retorno){
@@ -145,6 +199,58 @@ app.get('/consultas', function(req, res){
     });
 
 });
+
+app.get('/medicamentos', function(req, res){
+    // SQL
+    let sql = `SELECT * FROM medicamento WHERE idusuario = ${req.query.idusuario}`;
+
+    // executar comando sql
+    conexao.query(sql, function(erro, retorno){
+        //caso ocorra um erro
+        if(erro) {
+            res.statusCode = 500
+            res.setHeader("Content-Type", "text/plain")
+            res.setHeader("Access-Control-Allow-Origin", "*")
+            res.json(erro)
+        } 
+
+        // caso ocorra o cadastro
+        res.statusCode = 200
+        res.setHeader("Content-Type", "text/plain")
+        res.setHeader("Access-Control-Allow-Origin", "*")
+        const response = {medicamentos: retorno}
+        console.log(response)
+        res.json(response)
+    });
+});
+
+app.post("/login", async (req, res) => {
+    const body = req.body;
+    const {email, senha} = body;
+
+    // SQL
+    let sql = `SELECT idusuario FROM usuario WHERE email = "${email}" AND senha = "${senha}"`;
+
+    // executar comando sql
+    conexao.query(sql, function(erro, retorno){
+        //caso ocorra um erro
+        if(erro) {
+            console.log(erro)
+            res.statusCode = 500
+            res.setHeader("Content-Type", "text/plain")
+            res.setHeader("Access-Control-Allow-Origin", "*")
+            res.json(erro)
+        } 
+
+        // caso ocorra o cadastro
+        res.statusCode = 200
+        res.setHeader("Content-Type", "text/plain")
+        res.setHeader("Access-Control-Allow-Origin", "*")
+        res.json(retorno[0])
+    });
+});
+
+
 
 // Servidor
 app.listen(8080);

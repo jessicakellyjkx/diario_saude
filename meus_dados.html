@@ -106,6 +106,18 @@
             </div>
         </div>
     </div>
+</div>
+<script src="js/script.js"></script>
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("show");
+    }
+
+    window.onload = (event) => {
+        meusDados(localStorage.getItem('idusuario'));
+        dadosUsuario(localStorage.getItem('idusuario'));
+    };
+</script>
 
     <script src="js/script.js"></script>
     <script>
